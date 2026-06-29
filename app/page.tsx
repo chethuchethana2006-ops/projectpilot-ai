@@ -25,9 +25,9 @@ type ProjectIdea = {
 export default function Home() {
 
   const [results, setResults] = useState<ProjectIdea[]>([]);
-  const [skills, setSkills] = useState<string>("");
-  const [year, setYear] = useState<string>("1st Year");
-  const [goal, setGoal] = useState<string>("Internship");
+  const [skills, setSkills] = useState("");
+  const [year, setYear] = useState("1st Year");
+  const [goal, setGoal] = useState("Internship");
 
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
@@ -41,29 +41,35 @@ export default function Home() {
 
       const userSkills = skills
         .split(",")
-        .map((skill) => skill.trim().toLowerCase())
+        .map(skill => skill.trim().toLowerCase())
         .filter(Boolean);
-      const userYear = year;
+
       const userGoal = goal.toLowerCase();
 
-      const projectList = Array.isArray(projectIdeas)
-        ? (projectIdeas as ProjectIdea[])
-        : [];
-
-      const matchedProjects = projectList.filter((project) => {
-        const projectSkills = Array.isArray(project.skills)
-          ? project.skills
-          : [project.skills];
+      const matchedProjects = projectIdeas.filter(project => {
 
         return (
-          userSkills.some((userSkill) =>
-            projectSkills.some(
-              (skill) => skill.toLowerCase() === userSkill
+
+          userSkills.some(userSkill =>
+
+            project.skills.some(
+
+              skill => skill.toLowerCase() === userSkill
+
             )
-          ) &&
-          project.year === userYear &&
+
+          )
+
+          &&
+
+          project.year === year
+
+          &&
+
           project.goal.toLowerCase() === userGoal
+
         );
+
       });
 
       setResults(matchedProjects);
@@ -78,9 +84,9 @@ export default function Home() {
 
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-950 flex items-center justify-center p-6">
 
-      <div className="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-white/20 w-full max-w-lg">
+      <div className="bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-white/20 w-full max-w-3xl">
 
-        <div className="text-center mb-6">
+        <div className="text-center mb-8">
 
           <h1 className="text-4xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-700 bg-clip-text text-transparent">
 
@@ -96,14 +102,13 @@ export default function Home() {
 
         </div>
 
-
         <label className="flex items-center gap-2 mb-2 font-medium text-gray-800">
 
-  <Code2 size={18} className="text-cyan-600"/>
+          <Code2 size={18} className="text-cyan-600"/>
 
-  Skills
+          Skills
 
-</label>
+        </label>
 
         <input
 
@@ -115,18 +120,17 @@ export default function Home() {
 
           placeholder="Enter skills separated by commas"
 
-          className="w-full p-3 border border-gray-300 rounded-lg mb-4 text-black"
+          className="w-full p-3 border border-gray-300 rounded-lg mb-4 text-black focus:ring-2 focus:ring-cyan-400 outline-none"
 
         />
 
-
         <label className="flex items-center gap-2 mb-2 font-medium text-gray-800">
 
-  <Calendar size={18} className="text-cyan-600"/>
+          <Calendar size={18} className="text-cyan-600"/>
 
-  Year
+          Year
 
-</label>
+        </label>
 
         <select
 
@@ -134,28 +138,24 @@ export default function Home() {
 
           onChange={(e) => setYear(e.target.value)}
 
-          className="w-full p-3 border border-gray-300 rounded-lg mb-4 text-black"
+          className="w-full p-3 border border-gray-300 rounded-lg mb-4 text-black focus:ring-2 focus:ring-cyan-400 outline-none"
 
         >
 
           <option>1st Year</option>
-
           <option>2nd Year</option>
-
           <option>3rd Year</option>
-
           <option>4th Year</option>
 
         </select>
 
-
         <label className="flex items-center gap-2 mb-2 font-medium text-gray-800">
 
-  <Target size={18} className="text-cyan-600"/>
+          <Target size={18} className="text-cyan-600"/>
 
-  Goal
+          Goal
 
-</label>
+        </label>
 
         <select
 
@@ -163,52 +163,36 @@ export default function Home() {
 
           onChange={(e) => setGoal(e.target.value)}
 
-          className="w-full p-3 border border-gray-300 rounded-lg mb-6 text-black"
+          className="w-full p-3 border border-gray-300 rounded-lg mb-6 text-black focus:ring-2 focus:ring-cyan-400 outline-none"
 
         >
 
           <option>Internship</option>
-
           <option>Placement</option>
-
           <option>Learning</option>
 
         </select>
-
 
         <button
 
           onClick={generateIdea}
 
           className="
-
-            w-full
-
-            bg-gradient-to-r
-
-            from-cyan-500
-
-            to-blue-600
-
-            text-white
-
-            p-3
-
-            rounded-xl
-
-            font-semibold
-
-            shadow-lg
-
-            hover:shadow-cyan-400/50
-
-            hover:scale-105
-
-            transition-all
-
-            duration-300
-
-          "
+w-full
+bg-gradient-to-r
+from-cyan-500
+to-blue-600
+text-white
+p-3
+rounded-xl
+font-semibold
+shadow-lg
+hover:shadow-cyan-400/50
+hover:scale-105
+active:scale-95
+transition-all
+duration-300
+"
 
         >
 
@@ -216,10 +200,9 @@ export default function Home() {
 
         </button>
 
-
         {loading && (
 
-          <div className="flex items-center justify-center gap-3 mt-4">
+          <div className="flex items-center justify-center gap-3 mt-5">
 
             <div
 
@@ -241,7 +224,7 @@ export default function Home() {
 
               "
 
-            ></div>
+            />
 
             <p className="text-blue-600 font-medium">
 
@@ -253,21 +236,29 @@ export default function Home() {
 
         )}
 
-
         {results.length > 0 ? (
 
-          <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200 shadow-sm">
+          <div className="mt-8 p-5 bg-blue-50 rounded-xl border border-blue-200 shadow-sm">
 
-            <h2 className="font-bold mb-4 text-blue-700 flex items-center gap-2">
+            <h2 className="font-bold text-blue-700 flex items-center gap-2 mb-1">
 
-  <Sparkles
-    size={20}
-    className="text-cyan-500"
-  />
+              <Sparkles
 
-  AI Recommended Projects
+                size={20}
 
-</h2>
+                className="text-cyan-500"
+
+              />
+
+              AI Recommended Projects
+
+            </h2>
+
+            <p className="text-sm text-gray-600 mb-5">
+
+              Found {results.length} recommendation(s)
+
+            </p>
 
             {results.map((result, index) => (
 
@@ -277,9 +268,9 @@ export default function Home() {
 
                 className="
 
-                  mb-4
+                  mb-6
 
-                  p-4
+                  p-5
 
                   bg-white
 
@@ -291,7 +282,8 @@ export default function Home() {
 
                   shadow-sm
 
-                  hover:shadow-lg
+                  hover:-translate-y-1
+                  hover:shadow-xl
 
                   transition-all
 
@@ -304,35 +296,75 @@ export default function Home() {
                 <h3 className="text-lg font-bold text-black mb-2">
 
                   {result.title}
-                  <span className="inline-block mb-3 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">
-
-  {result.category}
-
-</span>
 
                 </h3>
 
-                
+                <span
 
+                  className="
 
-                <p className="text-black mb-3">
+                    inline-block
+
+                    mb-3
+
+                    px-3
+
+                    py-1
+
+                    rounded-full
+
+                    text-xs
+
+                    font-semibold
+
+                    bg-gradient-to-r
+
+                    from-purple-100
+
+                    to-pink-100
+
+                    text-purple-700
+
+                  "
+
+                >
+
+                  {result.category}
+
+                </span>
+
+                <p className="text-black mb-4">
 
                   {result.description}
 
                 </p>
 
-
-                <div className="flex gap-3 mb-3">
+                <div className="flex gap-3 mb-4">
 
                   <span
 
                     className={
+
                       "px-3 py-1 rounded-full text-sm font-semibold " +
-                      (result.difficulty === "Beginner"
+
+                      (
+
+                        result.difficulty === "Beginner"
+
                         ? "bg-green-200 text-green-800"
-                        : result.difficulty === "Intermediate"
+
+                        :
+
+                        result.difficulty === "Intermediate"
+
                         ? "bg-yellow-200 text-yellow-800"
-                        : "bg-red-200 text-red-800")
+
+                        :
+
+                        "bg-red-200 text-red-800"
+
+                      )
+
                     }
 
                   >
@@ -340,7 +372,6 @@ export default function Home() {
                     {result.difficulty}
 
                   </span>
-
 
                   <span
 
@@ -370,8 +401,7 @@ export default function Home() {
 
                 </div>
 
-
-                <div className="flex flex-wrap gap-2 mb-3">
+                <div className="flex flex-wrap gap-2 mb-4">
 
                   {result.techStack.map((tech, i) => (
 
@@ -407,7 +437,6 @@ export default function Home() {
 
                 </div>
 
-
                 <p className="text-sm text-gray-700 mb-1">
 
                   <span className="font-semibold">
@@ -422,7 +451,6 @@ export default function Home() {
 
                 </p>
 
-
                 <p className="text-sm text-gray-700 mb-1">
 
                   <span className="font-semibold">
@@ -436,7 +464,6 @@ export default function Home() {
                   {result.year}
 
                 </p>
-
 
                 <p className="text-sm text-gray-700">
 
@@ -460,21 +487,21 @@ export default function Home() {
 
         ) : searched && !loading ? (
 
-         <div className="mt-6 p-4 bg-gray-100 rounded-lg">
+          <div className="mt-6 p-4 bg-gray-100 rounded-lg">
 
-  <p className="text-black font-semibold">
+            <p className="text-black font-semibold">
 
-    🚫 No matching projects found.
+              🚫 No matching projects found.
 
-  </p>
+            </p>
 
-  <p className="text-gray-600 text-sm mt-1">
+            <p className="text-gray-600 text-sm mt-1">
 
-    Try another skill, year or goal.
+              Try another skill, year or goal.
 
-  </p>
+            </p>
 
-</div>
+          </div>
 
         ) : null}
 
