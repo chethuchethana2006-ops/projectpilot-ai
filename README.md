@@ -1,6 +1,6 @@
 # 🚀 ProjectPilot AI
 
-AI-powered project recommendation platform built using Gemini API.
+AI-powered platform that generates personalized project ideas using Google's Gemini API.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-blue)
@@ -46,8 +46,9 @@ https://projectpilot-ai-self.vercel.app
 
 ---
 
-### 🌐 Live Demo
-![Live Demo](./public/screenshots/live-demo.png)
+🌐 Live Demo
+
+[Visit ProjectPilot AI](https://projectpilot-ai-self.vercel.app)
 
 ---
 
