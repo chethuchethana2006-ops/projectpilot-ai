@@ -58,3 +58,12 @@ npm run dev
 ```
 
 ---
+## 🔑 Environment Variables
+
+Create:
+
+```env
+GEMINI_API_KEY=your_key_here
+```
+
+---
