@@ -14,16 +14,14 @@ https://projectpilot-ai-self.vercel.app
 ---
 ## ✨ Features
 
-- AI-powered recommendations
-- Multiple skill search
-- Internship focused suggestions
-- Difficulty estimation
-- Duration prediction
-- Tech stack recommendations
-- Dynamic Gemini responses
-- Responsive UI
-- Modern card design
-
+- AI-powered project recommendations
+- Personalized suggestions
+- Internship-focused ideas
+- Difficulty prediction
+- Duration estimation
+- Recommended tech stack
+- Responsive design
+- Gemini 2.5 Flash integration
 ---
 
 ## 🛠 Tech Stack
