@@ -15,3 +15,27 @@ AI-powered project recommendation platform built with Gemini API.
 https://projectpilot-ai-self.vercel.app
 
 ---
+## ✨ Features
+
+- AI-powered recommendations
+- Multiple skill search
+- Internship focused suggestions
+- Difficulty estimation
+- Duration prediction
+- Tech stack recommendations
+- Dynamic Gemini responses
+- Responsive UI
+- Modern card design
+
+---
+
+## 🛠 Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Gemini API
+- Google GenAI SDK
+- Vercel
+
+---
