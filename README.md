@@ -43,15 +43,15 @@ https://projectpilot-ai-self.vercel.app
 
 ### Home
 
-![Home](public/screenshots/home.png)
+![Home]("C:\Users\cheth\OneDrive\画像\public\screenshots\home.png.jpeg")
 
 ### AI Recommendations
 
-![Recommendations](public/screenshots/recommendations.png)
+![Recommendations]("C:\Users\cheth\OneDrive\画像\public\screenshots\recommendations.png.jpeg")
 
 ### Live Demo
 
-![Live Demo](public/screenshots/live-demo.png)
+![Live Demo]("C:\Users\cheth\OneDrive\画像\public\screenshots\live-demo.png.jpeg")
 ---
 
 ## ⚙️ Installation
