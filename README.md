@@ -39,6 +39,7 @@ H --> J
 
 I --> J
 ```
+
 ## ✨ Features
 
 - AI-powered project recommendations
