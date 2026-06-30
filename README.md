@@ -39,19 +39,20 @@ https://projectpilot-ai-self.vercel.app
 - Vercel
 
 ---
-## 📷 Preview
+## 📸 Project Preview
 
-### Home
+### 🏠 Home Screen
+![Home](./public/screenshots/home.png)
 
-![Home](public/screenshots/home.png)
+---
 
-### AI Recommendations
+### 🤖 AI Recommendations
+![Recommendations](./public/screenshots/recommendations.png)
 
-![Recommendations](public/screenshots/recommendations.png)
+---
 
-### Live Demo
-
-![Live Demo](public/screenshots/live-demo.png)
+### 🌐 Live Demo
+![Live Demo](./public/screenshots/live-demo.png)
 
 ---
 
