@@ -1,366 +1,244 @@
-
 const projectIdeas = [
   {
-    title: "Student Expense Tracker",
+    title: "Smart Student Expense Analytics Dashboard",
     category: "Finance",
-    skills: ["javascript"],
+    skills: ["javascript", "react", "chart.js"],
     year: "2nd Year",
     goal: "internship",
-    description: "Track daily expenses with reports and charts.",
+    description:
+      "Build an expense tracker with monthly insights, category-wise charts, savings goals, and local data persistence.",
     difficulty: "Intermediate",
     duration: "2 Weeks",
-    techStack: ["JavaScript", "Chart.js", "Local Storage"]
+    techStack: ["React", "JavaScript", "Chart.js", "Tailwind CSS", "Local Storage"],
   },
   {
-    title: "Portfolio Website",
+    title: "AI-Powered Portfolio Website",
     category: "Web Development",
-    skills: ["html"],
+    skills: ["html", "css", "javascript"],
     year: "1st Year",
     goal: "internship",
-    description: "Create a personal portfolio website.",
+    description:
+      "Create a modern portfolio with project showcases, resume download, contact form, and an AI-style project recommendation section.",
     difficulty: "Beginner",
     duration: "1 Week",
-    techStack: ["HTML", "CSS", "JavaScript"]
+    techStack: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
   },
   {
-    title: "Library Management System",
+    title: "Library Management System with Smart Search",
     category: "Management",
-    skills: ["java"],
+    skills: ["java", "mysql"],
     year: "2nd Year",
     goal: "placement",
-    description: "Manage books and student records.",
+    description:
+      "Manage books, students, issue records, return dates, fines, and fast search filters through a desktop-based admin system.",
     difficulty: "Intermediate",
     duration: "3 Weeks",
-    techStack: ["Java", "Swing", "MySQL"]
+    techStack: ["Java", "Swing", "MySQL", "JDBC"],
   },
   {
-    title: "AI Resume Analyzer",
+    title: "AI Resume Analyzer and Job Match Tool",
     category: "Artificial Intelligence",
-    skills: ["python"],
+    skills: ["python", "flask", "ai"],
     year: "3rd Year",
     goal: "internship",
-    description: "Analyze resumes using AI.",
+    description:
+      "Analyze resumes, extract skills, score job fit, suggest missing keywords, and generate improvement tips using AI.",
     difficulty: "Intermediate",
     duration: "2 Weeks",
-    techStack: ["Python", "Flask", "OpenAI API"]
+    techStack: ["Python", "Flask", "Gemini API", "PDF Parser", "Tailwind CSS"],
   },
   {
-    title: "Weather Dashboard",
+    title: "Live Weather Intelligence Dashboard",
     category: "Web Development",
-    skills: ["javascript"],
+    skills: ["javascript", "api"],
     year: "2nd Year",
     goal: "learning",
-    description: "Display weather information using APIs.",
+    description:
+      "Display live weather, forecasts, air quality, city search, and visual weather cards using public APIs.",
     difficulty: "Beginner",
     duration: "1 Week",
-    techStack: ["JavaScript", "OpenWeather API", "CSS"]
+    techStack: ["JavaScript", "OpenWeather API", "CSS", "Local Storage"],
   },
   {
-    title: "Task Manager",
+    title: "Productivity Task Manager with Priority Engine",
     category: "Productivity",
-    skills: ["javascript"],
+    skills: ["javascript", "react"],
     year: "2nd Year",
     goal: "internship",
-    description: "Manage tasks with deadlines and priorities.",
+    description:
+      "Create a task manager with deadlines, priorities, progress tracking, filters, and productivity stats.",
     difficulty: "Intermediate",
     duration: "2 Weeks",
-    techStack: ["React", "Local Storage", "Tailwind"]
+    techStack: ["React", "JavaScript", "Tailwind CSS", "Local Storage"],
   },
   {
-    title: "Quiz Platform",
+    title: "Interactive Quiz Platform with Score Analytics",
     category: "Education",
-    skills: ["html"],
+    skills: ["html", "css", "javascript"],
     year: "1st Year",
     goal: "learning",
-    description: "Create quizzes and evaluate scores.",
+    description:
+      "Build a quiz app with categories, timer, instant scoring, answer review, and performance summary.",
     difficulty: "Beginner",
     duration: "1 Week",
-    techStack: ["HTML", "CSS", "JavaScript"]
+    techStack: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "Fitness Tracker",
+    title: "Personal Fitness and Habit Analytics App",
     category: "Healthcare",
-    skills: ["python"],
+    skills: ["python", "flask"],
     year: "3rd Year",
     goal: "internship",
-    description: "Track workouts, calories and fitness goals.",
+    description:
+      "Track workouts, calories, habits, streaks, and weekly progress through a clean dashboard.",
     difficulty: "Intermediate",
     duration: "3 Weeks",
-    techStack: ["Python", "Flask", "SQLite"]
+    techStack: ["Python", "Flask", "SQLite", "Chart.js"],
   },
   {
-  title: "Chat Application",
-  category: "Communication",
-
-  skills: ["javascript"],
-
-  year: "2nd Year",
-
-  goal: "internship",
-
-  description: "Build a real-time messaging application.",
-
-  difficulty: "Intermediate",
-
-  duration: "3 Weeks",
-
-  techStack: [
-    "React",
-    "Socket.io",
-    "Node.js"
-  ]
-},
-
-{
-  title: "Hospital Management System",
-  category: "Healthcare",
-
-  skills: ["java"],
-
-  year: "2nd Year",
-
-  goal: "placement",
-
-  description: "Manage patient records and appointments.",
-
-  difficulty: "Intermediate",
-
-  duration: "4 Weeks",
-
-  techStack: [
-    "Java",
-    "Swing",
-    "MySQL"
-  ]
-},
-
-{
-  title: "AI Study Planner",
-  category: "Artificial Intelligence",
-
-  skills: ["python"],
-
-  year: "3rd Year",
-
-  goal: "learning",
-
-  description: "Generate personalized study schedules.",
-
-  difficulty: "Intermediate",
-
-  duration: "2 Weeks",
-
-  techStack: [
-    "Python",
-    "Flask",
-    "OpenAI API"
-  ]
-},
-
-{
-  title: "E-commerce Store",
-  category: "Web Development",
-
-  skills: ["html"],
-
-  year: "1st Year",
-
-  goal: "internship",
-
-  description: "Build an online shopping platform.",
-
-  difficulty: "Intermediate",
-
-  duration: "3 Weeks",
-
-  techStack: [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ]
-},
-{
-  title: "Attendance Management System",
-  category: "Education",
-
-  skills: ["java"],
-
-  year: "2nd Year",
-
-  goal: "placement",
-
-  description: "Track student attendance and generate reports.",
-
-  difficulty: "Intermediate",
-
-  duration: "2 Weeks",
-
-  techStack: [
-    "Java",
-    "Swing",
-    "MySQL"
-  ]
-},
-
-{
-  title: "Travel Planner",
-  category: "Travel",
-
-  skills: ["javascript"],
-
-  year: "2nd Year",
-
-  goal: "learning",
-
-  description: "Plan trips with itineraries and budgets.",
-
-  difficulty: "Beginner",
-
-  duration: "2 Weeks",
-
-  techStack: [
-    "JavaScript",
-    "React",
-    "Tailwind"
-  ]
-},
-
-{
-  title: "Habit Tracker",
-  category: "Productivity",
-
-  skills: ["python"],
-
-  year: "3rd Year",
-
-  goal: "internship",
-
-  description: "Track daily habits and monitor progress.",
-
-  difficulty: "Intermediate",
-
-  duration: "2 Weeks",
-
-  techStack: [
-    "Python",
-    "Flask",
-    "SQLite"
-  ]
-},
-
-{
-  title: "Blog Platform",
-  category: "Web Development",
-
-  skills: ["html"],
-
-  year: "1st Year",
-
-  goal: "learning",
-
-  description: "Create and manage blog posts online.",
-
-  difficulty: "Beginner",
-
-  duration: "1 Week",
-
-  techStack: [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ]
-},
-{
-  title: "Interview Preparation App",
-  category: "Education",
-
-  skills: ["python"],
-
-  year: "3rd Year",
-
-  goal: "placement",
-
-  description: "Practice coding questions and mock interviews.",
-
-  difficulty: "Intermediate",
-
-  duration: "3 Weeks",
-
-  techStack: [
-    "Python",
-    "Flask",
-    "SQLite"
-  ]
-},
-
-{
-  title: "Movie Recommendation System",
-  category: "Artificial Intelligence",
-
-  skills: ["python"],
-
-  year: "3rd Year",
-
-  goal: "learning",
-
-  description: "Recommend movies based on user preferences.",
-
-  difficulty: "Intermediate",
-
-  duration: "2 Weeks",
-
-  techStack: [
-    "Python",
-    "Pandas",
-    "Scikit-Learn"
-  ]
-},
-
-{
-  title: "Online Food Ordering System",
-  category: "Web Development",
-
-  skills: ["html"],
-
-  year: "1st Year",
-
-  goal: "internship",
-
-  description: "Order food online with cart and payment options.",
-
-  difficulty: "Intermediate",
-
-  duration: "3 Weeks",
-
-  techStack: [
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ]
-},
-
-{
-  title: "Employee Management System",
-  category: "Management",
-
-  skills: ["java"],
-
-  year: "2nd Year",
-
-  goal: "placement",
-
-  description: "Manage employee records, salaries and departments.",
-
-  difficulty: "Intermediate",
-
-  duration: "3 Weeks",
-
-  techStack: [
-    "Java",
-    "Swing",
-    "MySQL"
-  ]
-},
+    title: "Real-Time Chat App with Online Status",
+    category: "Communication",
+    skills: ["javascript", "react", "node.js"],
+    year: "2nd Year",
+    goal: "internship",
+    description:
+      "Build a real-time messaging app with rooms, typing indicators, online users, and message history.",
+    difficulty: "Intermediate",
+    duration: "3 Weeks",
+    techStack: ["React", "Node.js", "Socket.io", "Express"],
+  },
+  {
+    title: "Hospital Appointment and Patient Record System",
+    category: "Healthcare",
+    skills: ["java", "mysql"],
+    year: "2nd Year",
+    goal: "placement",
+    description:
+      "Manage patients, doctors, appointments, prescriptions, billing, and searchable medical records.",
+    difficulty: "Intermediate",
+    duration: "4 Weeks",
+    techStack: ["Java", "Swing", "MySQL", "JDBC"],
+  },
+  {
+    title: "AI Study Planner with Personalized Timetable",
+    category: "Artificial Intelligence",
+    skills: ["python", "ai", "flask"],
+    year: "3rd Year",
+    goal: "learning",
+    description:
+      "Generate personalized study plans based on subjects, deadlines, weak topics, and daily availability.",
+    difficulty: "Intermediate",
+    duration: "2 Weeks",
+    techStack: ["Python", "Flask", "Gemini API", "SQLite"],
+  },
+  {
+    title: "Mini E-Commerce Store with Cart System",
+    category: "Web Development",
+    skills: ["html", "css", "javascript"],
+    year: "1st Year",
+    goal: "internship",
+    description:
+      "Build a shopping site with product cards, cart, quantity control, checkout summary, and responsive UI.",
+    difficulty: "Intermediate",
+    duration: "3 Weeks",
+    techStack: ["HTML", "CSS", "JavaScript", "Local Storage"],
+  },
+  {
+    title: "Smart Attendance Management Dashboard",
+    category: "Education",
+    skills: ["java", "mysql"],
+    year: "2nd Year",
+    goal: "placement",
+    description:
+      "Track attendance, calculate percentages, generate reports, and identify shortage-risk students.",
+    difficulty: "Intermediate",
+    duration: "2 Weeks",
+    techStack: ["Java", "Swing", "MySQL", "JDBC"],
+  },
+  {
+    title: "AI Travel Planner with Budget Estimator",
+    category: "Travel",
+    skills: ["javascript", "react", "api"],
+    year: "2nd Year",
+    goal: "learning",
+    description:
+      "Plan trips with destination search, itinerary builder, estimated budget, packing list, and saved plans.",
+    difficulty: "Intermediate",
+    duration: "2 Weeks",
+    techStack: ["React", "JavaScript", "Tailwind CSS", "Travel APIs"],
+  },
+  {
+    title: "Habit Tracker with Streak Gamification",
+    category: "Productivity",
+    skills: ["python", "flask"],
+    year: "3rd Year",
+    goal: "internship",
+    description:
+      "Track habits, streaks, completion history, weekly charts, and motivational progress badges.",
+    difficulty: "Intermediate",
+    duration: "2 Weeks",
+    techStack: ["Python", "Flask", "SQLite", "Chart.js"],
+  },
+  {
+    title: "Developer Blog Platform",
+    category: "Web Development",
+    skills: ["html", "css", "javascript"],
+    year: "1st Year",
+    goal: "learning",
+    description:
+      "Create a blog platform with post cards, search, categories, reading time, and a clean responsive layout.",
+    difficulty: "Beginner",
+    duration: "1 Week",
+    techStack: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "Interview Preparation and Mock Test App",
+    category: "Education",
+    skills: ["python", "flask"],
+    year: "3rd Year",
+    goal: "placement",
+    description:
+      "Practice coding questions, aptitude quizzes, mock interview prompts, and track preparation progress.",
+    difficulty: "Intermediate",
+    duration: "3 Weeks",
+    techStack: ["Python", "Flask", "SQLite", "Bootstrap"],
+  },
+  {
+    title: "Movie Recommendation System",
+    category: "Artificial Intelligence",
+    skills: ["python", "machine learning"],
+    year: "3rd Year",
+    goal: "learning",
+    description:
+      "Recommend movies using user preferences, similarity scoring, ratings, and genre-based filtering.",
+    difficulty: "Intermediate",
+    duration: "2 Weeks",
+    techStack: ["Python", "Pandas", "Scikit-Learn", "Streamlit"],
+  },
+  {
+    title: "Online Food Ordering App",
+    category: "Web Development",
+    skills: ["html", "css", "javascript"],
+    year: "1st Year",
+    goal: "internship",
+    description:
+      "Build a food ordering interface with menu filters, cart, order summary, and responsive restaurant UI.",
+    difficulty: "Intermediate",
+    duration: "3 Weeks",
+    techStack: ["HTML", "CSS", "JavaScript", "Local Storage"],
+  },
+  {
+    title: "Employee Management and Payroll System",
+    category: "Management",
+    skills: ["java", "mysql"],
+    year: "2nd Year",
+    goal: "placement",
+    description:
+      "Manage employees, departments, salary records, attendance, payroll reports, and admin search filters.",
+    difficulty: "Intermediate",
+    duration: "3 Weeks",
+    techStack: ["Java", "Swing", "MySQL", "JDBC"],
+  },
 ];
 
 export default projectIdeas;
