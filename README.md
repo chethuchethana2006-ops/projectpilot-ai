@@ -39,3 +39,22 @@ https://projectpilot-ai-self.vercel.app
 - Vercel
 
 ---
+## 📷 Preview
+
+(Add screenshots here later)
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/chethuchethana2006-ops/projectpilot-ai.git
+
+cd projectpilot-ai
+
+npm install
+
+npm run dev
+```
+
+---
