@@ -67,3 +67,18 @@ GEMINI_API_KEY=your_key_here
 ```
 
 ---
+## 🚀 Deployment
+
+Hosted on Vercel
+
+https://projectpilot-ai-self.vercel.app
+
+---
+
+## 👩‍💻 Author
+
+Chethana M M
+
+Computer Science Student
+
+CMR University
