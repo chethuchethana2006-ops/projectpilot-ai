@@ -12,6 +12,33 @@ AI-powered platform that generates personalized project ideas using Google's Gem
 https://projectpilot-ai-self.vercel.app
 
 ---
+## 🏗️ Architecture
+
+```mermaid
+flowchart TD
+
+A[User Input Skills] --> B[Next.js Frontend]
+
+B --> C[API Route]
+
+C --> D[Gemini API]
+
+D --> E[AI Recommendation Engine]
+
+E --> F[Project Cards]
+
+F --> G[Difficulty Prediction]
+
+F --> H[Duration Estimation]
+
+F --> I[Tech Stack Suggestions]
+
+G --> J[User Interface]
+
+H --> J
+
+I --> J
+```
 ## ✨ Features
 
 - AI-powered project recommendations
